@@ -1,0 +1,8 @@
+prefix=/home/ur3/catkin_sshin14/install
+
+Name: depth_image_proc
+Description: Description of depth_image_proc
+Version: 1.13.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ldepth_image_proc
+Requires: 

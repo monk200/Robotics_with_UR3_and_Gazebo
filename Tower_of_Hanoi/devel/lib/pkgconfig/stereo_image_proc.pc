@@ -1,0 +1,8 @@
+prefix=/home/ur3/catkin_sshin14/devel
+
+Name: stereo_image_proc
+Description: Description of stereo_image_proc
+Version: 1.13.0
+Cflags: -I/home/ur3/catkin_sshin14/devel/include -I/home/ur3/catkin_sshin14/src/lab2andDriver/drivers/camera_calibration/image_pipeline/stereo_image_proc/include
+Libs: -L${prefix}/lib -lstereo_image_proc
+Requires: image_geometry image_proc sensor_msgs stereo_msgs

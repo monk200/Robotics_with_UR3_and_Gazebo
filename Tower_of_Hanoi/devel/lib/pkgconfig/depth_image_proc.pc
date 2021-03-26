@@ -1,0 +1,8 @@
+prefix=/home/ur3/catkin_sshin14/devel
+
+Name: depth_image_proc
+Description: Description of depth_image_proc
+Version: 1.13.0
+Cflags: -I/home/ur3/catkin_sshin14/src/lab2andDriver/drivers/camera_calibration/image_pipeline/depth_image_proc/include
+Libs: -L${prefix}/lib -ldepth_image_proc
+Requires: 

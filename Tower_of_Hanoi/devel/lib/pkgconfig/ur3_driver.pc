@@ -1,0 +1,8 @@
+prefix=/home/ur3/catkin_sshin14/devel
+
+Name: ur3_driver
+Description: Description of ur3_driver
+Version: 0.0.0
+Cflags: -I/home/ur3/catkin_sshin14/devel/include -I/home/ur3/catkin_sshin14/src/lab2andDriver/drivers/ur3_driver/include
+Libs: -L${prefix}/lib 
+Requires: controller_manager actionlib control_msgs geometry_msgs roscpp sensor_msgs trajectory_msgs ur_msgs

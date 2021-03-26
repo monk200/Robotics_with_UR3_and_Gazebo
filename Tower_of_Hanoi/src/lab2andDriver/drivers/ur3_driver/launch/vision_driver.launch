@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find ur3_driver)/launch/ur3_driver.launch">
+	</include>
+	<include file="$(find ur3_driver)/launch/ece470_vision_driver.launch">
+	</include>
+
+</launch>

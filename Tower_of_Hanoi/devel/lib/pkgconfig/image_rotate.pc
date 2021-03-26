@@ -1,0 +1,8 @@
+prefix=/home/ur3/catkin_sshin14/devel
+
+Name: image_rotate
+Description: Description of image_rotate
+Version: 1.13.0
+Cflags: -I/home/ur3/catkin_sshin14/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

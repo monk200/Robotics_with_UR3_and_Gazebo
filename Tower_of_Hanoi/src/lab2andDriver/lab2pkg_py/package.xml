@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lab2pkg_py</name>
+  <version>0.0.0</version>
+  <description>The lab2pkg_py package</description>
+  <license>MIT</license>
+  <author email="cuihang1201@gmail.com">Hang Cui</author>
+  <maintainer email="cuihang1201@gmail.com">Hang Cui</maintainer>
+  <url type="bugtracker">https://github.com/hangcui1201/UIUC_ECE470_INTRODUCTION_TO_ROBOTICS</url>
+  <url type="repository">https://github.com/hangcui1201/UIUC_ECE470_INTRODUCTION_TO_ROBOTICS</url>
+  <url type="website">https://github.com/hangcui1201/UIUC_ECE470_INTRODUCTION_TO_ROBOTICS</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>ur3_driver</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>ur3_driver</exec_depend>
+  <export>
+  </export>
+</package>
