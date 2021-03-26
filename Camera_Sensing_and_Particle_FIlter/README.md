@@ -47,10 +47,5 @@ available) or roulette (prioritzes resampling particles with higher weights but 
 The cropped window below shows one orange blob being recognized by the camera.  
 ![Cropped Window](dot.png "Cropped Window")  
   
-The video below shows the accuracy of universal sampling on the particle filter:  
-![Universal Sampling]('particle filter og universal.mp4' "Universal Sampling")  
-The video below shows the accuracy of roulette sampling on the particle filter:  
-![Roulette Sampling]('particle filter og roulette.mp4' "Roulette Sampling")  
-  
 The image below shows the computer output showing the green, operator-controlled turtle overliad by the yellow, computer controlled turtle estimate.  
 ![Turtle](turtle.png "Turtle")
