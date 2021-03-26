@@ -274,28 +274,28 @@ def main():
         input_end_string = raw_input("Enter ending position <Either 1 2 3 or 0 to quit> ")
         print("You entered " + input_end_string + "\n")
 
-        if (int(input_end_string) == 1):
-            end_pos = 0
+        if (int(input_end_string) == 1):        # if user typed '1' as the end position
+            end_pos = 0                         # set the variable end_pos to be 0 (zero-indexed)
             if (init_pos == 2):
                 temp_pos = 1
-            else:
+            else:                               # if init_pos was set to 0, the temp_pos must be 2
                 temp_pos = 2
         elif (int(input_end_string) == 2):
-            end_pos = 1
-            if (init_pos == 0):
+            end_pos = 1                         # end_pos is set to 1
+            if (init_pos == 0):                 # if init_pos was set to 0, the temp_pos must be 2
                 temp_pos = 2
-            else:
+            else:                               # if init_pos was set to 1, the temp_pos must be 0
                 temp_pos = 0
         elif (int(input_end_string) == 3):
-            end_pos = 2
-            if (init_pos == 1):
+            end_pos = 2                         # end_pos is set to 2
+            if (init_pos == 1):                 # if init_pos was set to 1, the temp_pos must be 0
                 temp_pos = 0
-            else:
+            else:                               # if init_pos was set to 0, the temp_pos must be 1
                 temp_pos = 1
-        elif (int(input_end_string) == 0):
+        elif (int(input_end_string) == 0):      # if the user types '0', quit the program
             print("Quitting... ")
             sys.exit()
-        else:
+        else:                                   # the user should input one of the selected values
             print("Please just enter the character 1 2 3 or 0 to quit \n\n")
 
     ############### Your Code Ends Here ###############
@@ -311,15 +311,15 @@ def main():
     ############## Your Code Starts Here ##############
     # TODO: modify the code so that UR3 can move a tower to a new location according to user input
 
-    move_arm(pub_command, loop_rate, home, 4.0, 4.0)
-    move_block(pub_command, loop_rate, init_pos, 1, end_pos, 3)
-    move_block(pub_command, loop_rate, init_pos, 2, temp_pos, 3)
-    move_block(pub_command, loop_rate, end_pos, 3, temp_pos, 2)
-    move_block(pub_command, loop_rate, init_pos, 3, end_pos, 3)
-    move_block(pub_command, loop_rate, temp_pos, 2, init_pos, 3)
-    move_block(pub_command, loop_rate, temp_pos, 3, end_pos, 2)
-    move_block(pub_command, loop_rate, init_pos, 3, end_pos, 1)
-    move_arm(pub_command, loop_rate, home, 4.0, 4.0)
+    move_arm(pub_command, loop_rate, home, 4.0, 4.0)        # start at a safe position
+    move_block(pub_command, loop_rate, init_pos, 1, end_pos, 3)     # top block to end_pos
+    move_block(pub_command, loop_rate, init_pos, 2, temp_pos, 3)    # middle block to temp_pos
+    move_block(pub_command, loop_rate, end_pos, 3, temp_pos, 2)     # top block to temp_pos
+    move_block(pub_command, loop_rate, init_pos, 3, end_pos, 3)     # bottom block to end_pos
+    move_block(pub_command, loop_rate, temp_pos, 2, init_pos, 3)    # top block to init_pos
+    move_block(pub_command, loop_rate, temp_pos, 3, end_pos, 2)     # middle block to end_pos
+    move_block(pub_command, loop_rate, init_pos, 3, end_pos, 1)     # top block to end_pos
+    move_arm(pub_command, loop_rate, home, 4.0, 4.0)        # end at safe position
 
 ############### Your Code Ends Here ###############
 
