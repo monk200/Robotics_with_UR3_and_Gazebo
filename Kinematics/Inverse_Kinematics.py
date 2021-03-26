@@ -71,29 +71,6 @@ def inverseKinematics(input):
 
     return [np.degrees(t1), np.degrees(t2), np.degrees(t3), np.degrees(t4), np.degrees(t5), np.degrees(t6)]
 
-def inverseKinematicsMichael(input):
-    xcen = input[0] + .15 - (L9 * np.cos(input[3]))
-    ycen = input[1] - .15 - (L9 * np.sin(input[3]))
-    zcen = input[2] - .01
-
-    t1 = np.arctan2(ycen, xcen) - np.arcsin((L2-L4+L6) / math.sqrt(math.pow(xcen, 2) + math.pow(ycen, 2)))
-
-    # I swapped the sin and cos for yend's equation
-    xend = xcen + (L2-L4+L6)*np.sin(t1) - L7*np.cos(t1)
-    yend = ycen - (L2-L4+L6)*np.cos(t1) - L7*np.sin(t1)
-    zend = zcen + L8 + L10
-
-    all3end = math.sqrt(np.arccos(math.pow(xend, 2)+math.pow(yend, 2)+math.pow(zend-L1, 2)))
-    R = math.sqrt(math.pow(xend, 2)+math.pow(yend, 2)+math.pow(zend-L1, 2))     # remove the arccos and use in place of all3end
-
-    t3 = np.pi - np.arccos((math.pow(L3, 2)+math.pow(L5, 2)-math.pow(R, 2))/(2*L3*L5))      # subtract R^2 because it is opposite the angle you're solving for
-    t2 = -np.arcsin(L5*np.sin(t3)/R)-np.arcsin((zend-L1)/R)
-    t4 = -t2 - t3
-    t5 = -np.pi/2
-    t6 = t1 + np.pi/2 - input[3]
-
-    return [np.degrees(t1), np.degrees(t2), np.degrees(t3), np.degrees(t4), np.degrees(t5), np.degrees(t6)]
-
 """
 Helper function for forward kinematics that builds the numerical exponential matrix
 """
