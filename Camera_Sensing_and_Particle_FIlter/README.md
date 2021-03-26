@@ -39,10 +39,18 @@ intrinsic: r = beta * x<sup>c</sup> + O<sub>r</sub> ; c = beta * y<sup>c</sup> +
 extrinsic: x<sup>c</sup> = cos(theta) * x<sup>w</sup> + (-sin(theta) * y<sup>w</sup>) + T<sub>x</sub> ; y<sup>c</sup> = sin(theta) * x<sup>w</sup> + cos(theta) * y<sup>w</sup> + T<sub>y</sub>  
 #### lab3_move_exec.py and Particle Filter.py
 Following instructions in comments in the code, a particle filter was implemented and used to create a grid pattern with a controllable green turtle that follows the movement of 
-the robotic arm and a yellow turtle indicating where the particle filter believes the green turtle is based on the camera's recognition of the orange dot attached to the end effector of the UR3 arm.
+the robotic arm and a yellow turtle indicating where the particle filter believes the green turtle is based on the camera's recognition of the orange dot attached to the end effector of the UR3 arm. Particle Filter.py can be run as its own standalone file and will pop up a small window with a turtle that can be (slowly) controlled with the arrow 
+keys. In lines 566-604, you are able to comment out part of it to determine if the resamling is universal (randly chooses particle that will get resampled among all particles 
+available) or roulette (prioritzes resampling particles with higher weights but is still fairly random). Through practice, it can be seen that roulette sampling performs better.
 
 ## Output
 The cropped window below shows one orange blob being recognized by the camera.  
 ![Cropped Window](dot.png "Cropped Window")  
+  
+The video below shows the accuracy of universal sampling on the particle filter:  
+![Universal Sampling]('particle filter og universal.mp4' "Universal Sampling")  
+The video below shows the accuracy of roulette sampling on the particle filter:  
+![Roulette Sampling]('particle filter og roulette.mp4' "Roulette Sampling")  
+  
 The image below shows the computer output showing the green, operator-controlled turtle overliad by the yellow, computer controlled turtle estimate.  
 ![Turtle](turtle.png "Turtle")
