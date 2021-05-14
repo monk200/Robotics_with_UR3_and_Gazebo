@@ -6,9 +6,9 @@ Please do not steal the code if you are currently in the course, there is no gua
 ## Content
 Each lab will have its own README file explaining what was done by me and information on how to run it on your own machine or a demo of its output if possible.  
   
-Tower_of_Hanoi: A lab meant to get comfortable using the ROS package in Python to control the UR3
-Camera_Sensing_and_Particle_Filter: A lab that works with ROS and OpenCV in Python to detect an orange dot attached to the UR3 and uses a particle filter to estimate the location of the UR3's end effector.  
-Kinematics: Python files that perform forward and inverse kinematics on the UR3 (including a symbolic partial solution for forward kinematics).
+[Tower_of_Hanoi](https://github.com/monk200/Robotics_with_UR3_and_Gazebo/tree/main/Tower_of_Hanoi): A lab meant to get comfortable using the ROS package in Python to control the UR3
+[Camera_Sensing_and_Particle_Filter](https://github.com/monk200/Robotics_with_UR3_and_Gazebo/tree/main/Camera_Sensing_and_Particle_FIlter): A lab that works with ROS and OpenCV in Python to detect an orange dot attached to the UR3 and uses a particle filter to estimate the location of the UR3's end effector.  
+[Kinematics](https://github.com/monk200/Robotics_with_UR3_and_Gazebo/tree/main/Kinematics): Python files that perform forward and inverse kinematics on the UR3 (including a symbolic partial solution for forward kinematics).
 
 ## Setup
 TBA
